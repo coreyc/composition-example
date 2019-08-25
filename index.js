@@ -9,7 +9,6 @@ const getIterationReport = tasks => {
     return sortedByUser // we could also just return the fn above
 }
 
-
 // without intermediate variables
 const getIterationReport = tasks => {
     return pipe(
