@@ -1,0 +1,22 @@
+{
+  "name": "composition-example",
+  "version": "1.0.0",
+  "description": "Demonstration of functional composition",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coreyc/composition-example.git"
+  },
+  "author": "Corey Cleary",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coreyc/composition-example/issues"
+  },
+  "homepage": "https://github.com/coreyc/composition-example#readme",
+  "dependencies": {
+    "ramda": "^0.26.1"
+  }
+}
