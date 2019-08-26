@@ -21,6 +21,7 @@ const getIterationReport = tasks => {
 
 // or 
 const getIterationReport = () => {
+    // returns function, thus we can call it with our 'tasks' arg
     return pipe(
         getIncomplete,
         filterOutBlocked,
