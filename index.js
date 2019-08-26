@@ -57,25 +57,22 @@ const groupBy = key => array => {
 const groupByAssignee = groupBy('assignedTo')
 
 // without intermediate variables
-const getIterationReport = tasks => {
-    return pipe(
-        getIncomplete,
-        getNonBlocked,
-        sortByDueDate,
-        groupByAssignee
-    )(tasks)
-}
-
-// or 
-// const getIterationReport = () => {
-//     // returns function, thus we can call it with our 'tasks' arg
+// const getIterationReport = tasks => {
 //     return pipe(
 //         getIncomplete,
-//         filterOutBlocked,
+//         getNonBlocked,
 //         sortByDueDate,
 //         groupByAssignee
-//     )
+//     )(tasks)
 // }
+
+// or 
+const getIterationReport = pipe(
+    getIncomplete,
+    getNonBlocked,
+    sortByDueDate,
+    groupByAssignee
+)
 
 const report = getIterationReport(tasks) // pipe will return a function, above we call pipe with args so it returns a result
 console.log(report)
