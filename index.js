@@ -31,15 +31,6 @@ const tasks = [
     }
 ]
 
-// with intermediate variables
-// const getIterationReport = tasks => {
-//     const incompleteTasks = fn(tasks)
-//     const withoutBlockedTasks = fn(incompleteTasks)
-//     const sortedByDueDate = fn(withoutBlockedTasks)
-//     const sortedByUser = fn(sortedByDueDate)
-//     return sortedByUser // we could also just return the fn above
-// }
-
 const getIncomplete = tasks => tasks.filter(({complete}) => !complete)
 
 const getNonBlocked = tasks => tasks.filter(({blocked}) => !blocked)
@@ -55,6 +46,14 @@ const groupBy = key => array => {
 }
 
 const groupByAssignee = groupBy('assignedTo')
+
+// with intermediate variables
+// const getIterationReport = tasks => {
+//     const incompleteTasks = getIncomplete(tasks)
+//     const withoutBlockedTasks = getNonBlocked(incompleteTasks)
+//     const sortedByDueDate = sortByDueDate(withoutBlockedTasks)
+//     return groupByAssignee(sortedByDueDate)
+// }
 
 // without intermediate variables
 // const getIterationReport = tasks => {
