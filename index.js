@@ -55,17 +55,6 @@ const groupByAssignee = groupBy('assignedTo')
 //     return groupByAssignee(sortedByDueDate)
 // }
 
-// without intermediate variables
-// const getIterationReport = tasks => {
-//     return pipe(
-//         getIncomplete,
-//         getNonBlocked,
-//         sortByDueDate,
-//         groupByAssignee
-//     )(tasks)
-// }
-
-// or 
 const getIterationReport = pipe(
     getIncomplete,
     getNonBlocked,
